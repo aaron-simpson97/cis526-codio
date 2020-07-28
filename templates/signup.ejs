@@ -1,0 +1,33 @@
+<div>
+    <h1>Sign Up</h1>
+    <form method="POST" action="/signup" id="signup">
+  
+      <label for="firstname">First Name:</label>
+      <input type="text" name="firstname" />
+  
+      <label for="lastname">Last Name:</label>
+      <input type="text" name="lastname" />
+
+      <label for="email">Email:</label>
+      <input type="text" name="email" />
+
+      <label for="organization">Organization:</label>
+      <input type="text" name="organization" />
+      
+      <label for="roles">Role:</label>
+      <select name="roles" id="roles" form="signup">
+        <option value="Foo" selected>Foo</option>
+        <option value="Bar">Bar</option>
+        <option value="Spam">Spam</option>
+      </select>
+
+      <label for="passsword">Password:</label>
+      <input type="password" name="password"/>
+  
+      <label for="passwordConfirmation">Password Confirmation:</label>
+      <input type="password" name="passwordConfirmation"/>
+  
+      <input type="submit" value="Create Account"/>
+  
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div>
+    <h1>New Post</h1>
+    <form method="POST" action="/forum/topics/<%= topic.id %>/posts">
+      <label for="topic">Topic:</label>
+      <input type="text" name="topic" value="<%= topic.id %>" placeholder="<%= topic.id %>">
+      <label for="user">User:</label>
+      <input type="text" name="user" value="<%= user.id %>" placeholder="<%= user.id %>">
+      <label for="title">Title</label>
+      <input type="text" name="title">
+      <label for="body">Body:</label>
+      <input type="text" name="body" />
+      <input type="submit" value="Create New Post"/>
+    </form>
+</div>

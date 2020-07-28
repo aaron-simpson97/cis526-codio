@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Aaron Simpson" />
+        <meta name="description" content="A website for 
+            learning about Kansas Computer Science education standards." />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="site.css" />
+        <script src="./site.js" defer></script>
+        <title>Kansas Computer Science Standards - Forums</title>
+    </head>
+    <body>
+        <h1>Computer Science 4 Kansas | Forums</h1>
+          <header>
+            <% if (user) { %>
+                Welcome <%= user.firstname %>!
+                <p>
+                  <a href="/signout">Sign Out</a>
+                </p>
+            <% } else { %>
+              <a href="/signin">Sign In</a> 
+              or
+              <a href="/signup">Sign Up</a>
+            <% } %>
+            <p>
+              <a href="/forum/topics/new">Create a New Topic</a>
+              <a href="/forum/posts/new">Create a New Post</a>
+              <a href="/forum">Forum Home</a>
+              <a href="/">Home</a>
+            </p>  
+        </header>
+        <div class="subjects">
+          <% for (const topic of topics) { %>
+            <div class="topic">
+              <a href="/forum/topics/<%= topic.id %>"><%= topic.subject %></p>
+              <p><%= topic.firstname + ' ' + topic.lastname %></p>
+              <p><%= new Date(topic.created_at).toDateString() %></p>
+            </div>
+          <% } %>
+        </div>
+    </body>
+</html>

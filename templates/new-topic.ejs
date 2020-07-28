@@ -1,0 +1,10 @@
+<div>
+    <h1>New Topics</h1>
+    <form method="POST" action="/forum/topics">
+      <label for="user">User:</label>
+      <input type="text" name="user" value="<%= user.id %>" placeholder="<%= user.id %>">
+      <label for="subject">Subject:</label>
+      <input type="text" name="subject" />
+      <input type="submit" value="Create New Topic"/>
+    </form>
+</div>
